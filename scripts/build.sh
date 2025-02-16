@@ -9,8 +9,8 @@ dnf5 -y clean all
 echo 'Updated!' 
 
 #Reinstall ublue os repos
-dnf5 -y copr enable ublue/os-staging
-dnf5 -y copr enable ublue/os-akmods
+dnf5 -y copr enable ublue-os/staging
+dnf5 -y copr enable ublue-os/akmods
 
 #Install CachyOS kernel 
 dnf5 -y copr enable bieszczaders/kernel-cachyos
