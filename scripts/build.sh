@@ -26,7 +26,8 @@ dnf5 -y copr enable bieszczaders/kernel-cachyos-addons
 dnf5 -y update --refresh
 dnf5 -y install libcap-ng libcap-ng-devel procps-ng procps-ng-devel
 dnf5 -y install cachyos-settings cachyos-ksm-settings uksmd cachyos-ananicy-rules ananicy-cpp --allowerasing
-sudo systemctl enable --now uksmd.service
+
+systemctl enable --now uksmd.service
 dnf5 -y copr disable bieszczaders/kernel-cachyos-addons 
 echo 'Cachy OS Kernel Installed with Addons'
 
