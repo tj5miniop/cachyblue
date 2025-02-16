@@ -11,7 +11,7 @@ echo 'Updated!'
 #Install CachyOS kernel 
 dnf5 -y copr enable bieszczaders/kernel-cachyos
 dnf5 -y update --refresh 
-dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra --allowerasing
+dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 -y install kernel-cachyos --allowerasing
 
 echo 'CachyOS Kernel Installed'
