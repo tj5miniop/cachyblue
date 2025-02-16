@@ -8,7 +8,7 @@ FROM ghcr.io/ublue-os/silverblue-nvidia:latest
 
 COPY scripts/build.sh /tmp/build.sh
 COPY scripts/build.sh /tmp/nvidia-open.sh
-COPY systemfiles/ /
+#COPY systemfiles/ /
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
