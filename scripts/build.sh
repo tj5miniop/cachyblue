@@ -19,7 +19,7 @@ echo 'CachyOS Kernel Installed'
 #Add extra stuff for performance 
 dnf5 -y copr disable bieszczaders/kernel-cachyos
 dnf5 -y copr enable bieszczaders/kernel-cachyos-addons 
-dnf5 -y install cachyos-settings cachyos-kcm-settings uksmd cachyos-ananicy-rules ananicy-cpp --allowerasing
+dnf5 -y install cachyos-settings cachyos-ksm-settings uksmd cachyos-ananicy-rules ananicy-cpp --allowerasing
 dnf5 -y copr disable biezczaders/kernel-cachyos-addons
 
 echo 'Cachy OS Kernel Installed with Addons'
