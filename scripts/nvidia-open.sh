@@ -1,4 +1,4 @@
-#!/bin/bash
+
 
 #This Updates the NVIDIA Drivers to the latest 'open' kernel module variant
 
