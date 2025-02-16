@@ -6,8 +6,6 @@ set -ouex pipefail
 dnf5 -y update 
 dnf5 -y clean all
 
-#Reinstall SystemD
-dnf5 -y install systemd
 
 echo 'Updated!' 
 
@@ -38,7 +36,4 @@ dnf5 -y copr enable execat/mutter-performance
 dnf5 -y update --refresh
 dnf5 -y copr disable execat/mutter-performance 
 echo 'Done'
-
-#Systemd units 
-systemctl enable --now uksmd.service
 
