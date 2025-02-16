@@ -6,6 +6,9 @@ set -ouex pipefail
 dnf5 -y update 
 dnf5 -y clean all
 
+#Reinstall SystemD
+dnf5 -y install systemd
+
 echo 'Updated!' 
 
 #Reinstall ublue os repos
@@ -17,7 +20,7 @@ dnf5 -y copr enable bieszczaders/kernel-cachyos
 dnf5 -y update --refresh 
 dnf5 -y remove kernel kernel-core kernel-modules kernel-modules-core kernel-modules-extra
 dnf5 -y install kernel-cachyos --allowerasing
-
+dnf5 -y install podman distrobox
 echo 'CachyOS Kernel Installed'
 
 #Add extra stuff for performance 
@@ -35,3 +38,7 @@ dnf5 -y copr enable execat/mutter-performance
 dnf5 -y update --refresh
 dnf5 -y copr disable execat/mutter-performance 
 echo 'Done'
+
+#Systemd units 
+systemctl enable --now uksmd.service
+
