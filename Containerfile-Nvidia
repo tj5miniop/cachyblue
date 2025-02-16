@@ -7,7 +7,7 @@ FROM ghcr.io/ublue-os/silverblue-nvidia:latest
 ## the following RUN directive does all the things required to run "build.sh" as recommended.
 
 COPY scripts/build.sh /tmp/build.sh
-COPY scripts/build.sh /tmp/nvidia-open.sh
+COPY scripts/nvidia-open.sh /tmp/nvidia-open.sh
 #COPY systemfiles/ /
 
 RUN mkdir -p /var/lib/alternatives && \
