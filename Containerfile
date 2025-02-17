@@ -12,6 +12,5 @@ COPY scripts/mesa.sh /tmp/mesa.sh
 
 RUN mkdir -p /var/lib/alternatives && \
     /tmp/build.sh && \
-    /tmp/mesa.sh && \
     ostree container commit
     
