@@ -1,6 +1,4 @@
-#Add RPM Fusion repos
-dnf -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf -y update --refresh 
-#This Updates the NVIDIA Drivers to the latest 'open' kernel module variant
-dnf -y install https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-tainted-$(rpm -E %fedora).noarch.rpm
-dnf -y install akmod-nvidia-open
+# Use Negativo 17s repos to get the latest nvidia driver
+dnf -y config-manager --add-repo=https://negativo17.org/repos/fedora-nvidia.repo
+dnf -y update
+dnf -y install nvidia-driver nvidia-driver-libs.i686 nvidia-driver-cuda nvidia-settings
