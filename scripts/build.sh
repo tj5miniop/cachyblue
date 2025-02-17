@@ -37,8 +37,3 @@ dnf5 -y update --refresh
 dnf5 -y copr disable execat/mutter-performance 
 echo 'Done'
 
-# Install Steam for gaming
-
-dnf -y config-manager --add-repo=https://negativo17.org/repos/fedora-steam.repo 
-dnf -y install steam 
-
