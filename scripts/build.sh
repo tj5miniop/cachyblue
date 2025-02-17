@@ -39,6 +39,6 @@ echo 'Done'
 
 # Install Steam for gaming
 
-dnf config-manager --add-repo=https://negativo17.org/repos/fedora-steam.repo 
+dnf -y config-manager --add-repo=https://negativo17.org/repos/fedora-steam.repo 
 dnf -y install steam 
 
